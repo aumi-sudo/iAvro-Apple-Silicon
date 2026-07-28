@@ -6,10 +6,8 @@
 //
 
 #import "MainMenuAppDelegate.h"
-#import "AutoCorrect.h"
-#import "CacheManager.h"
-#import "Database.h"
-#import "RegexParser.h"
+// Swift engine classes (AutoCorrect, CacheManager, Database, RegexParser)
+#import "Avro_Keyboard-Swift.h"
 
 @implementation MainMenuAppDelegate
 

@@ -6,12 +6,10 @@
 //
 
 #import "AvroKeyboardController.h"
-#import "Suggestion.h"
 #import "Candidates.h"
-#import "CacheManager.h"
 #import "RegexKitLite.h"
-#import "AvroParser.h"
-#import "AutoCorrect.h"
+// Swift engine classes (AvroParser, Suggestion, CacheManager, AutoCorrect, …)
+#import "Avro_Keyboard-Swift.h"
 
 @implementation AvroKeyboardController
 
