@@ -18,11 +18,11 @@
 		35895BF3159763A300F2A3ED /* autodict.dct in Resources */ = {isa = PBXBuildFile; fileRef = 35895BF2159763A300F2A3ED /* autodict.dct */; };
 		35895BFE1597706800F2A3ED /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 35895BFA1597706800F2A3ED /* MainMenu.nib */; };
 		35B47478159A668D00C69C7D /* avro.icns in Resources */ = {isa = PBXBuildFile; fileRef = 35B47477159A668D00C69C7D /* avro.icns */; };
-		35DBC86B1597A15B00B9772E /* MainMenuAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 35DBC86A1597A15B00B9772E /* MainMenuAppDelegate.m */; };
 		35F4DE73159404A3001EAC81 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 35F4DE72159404A3001EAC81 /* data.json */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
-		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		B651462A302A032D00322155 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6514628302A032D00322155 /* main.swift */; };
+		B651462B302A032D00322155 /* MainMenuAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6514629302A032D00322155 /* MainMenuAppDelegate.swift */; };
 		B66D35AF3018E4AD007E0DCD /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B66D35AD3018E1FA007E0DCD /* libsqlite3.tbd */; };
 		B67CFB423029FE0700F9BC18 /* Candidates.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67CFB403029FE0700F9BC18 /* Candidates.swift */; };
 		B67CFB433029FE0700F9BC18 /* AvroKeyboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67CFB3F3029FE0700F9BC18 /* AvroKeyboardController.swift */; };
@@ -38,10 +38,8 @@
 
 /* Begin PBXFileReference section */
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
-		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
-		32CA4F630368D1EE00C91783 /* AvroKeyboard_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvroKeyboard_Prefix.pch; sourceTree = "<group>"; };
 		350CECD9159C45790009F0FE /* database.db3 */ = {isa = PBXFileReference; lastKnownFileType = file; path = database.db3; sourceTree = "<group>"; };
 		350CECE0159C45790009F0FE /* regex.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = regex.json; sourceTree = "<group>"; };
 		356B186815A445DA00091215 /* AutoCorrect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AutoCorrect.png; path = Icons/AutoCorrect.png; sourceTree = "<group>"; };
@@ -51,11 +49,11 @@
 		3587CCD715A7C5E50074BFF1 /* preferences.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = preferences.plist; sourceTree = "<group>"; };
 		35895BF2159763A300F2A3ED /* autodict.dct */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = autodict.dct; sourceTree = "<group>"; };
 		35B47477159A668D00C69C7D /* avro.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = avro.icns; sourceTree = "<group>"; };
-		35DBC8691597A15B00B9772E /* MainMenuAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuAppDelegate.h; sourceTree = "<group>"; };
-		35DBC86A1597A15B00B9772E /* MainMenuAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuAppDelegate.m; sourceTree = "<group>"; };
 		35F4DE72159404A3001EAC81 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Avro Keyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Avro Keyboard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6514628302A032D00322155 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		B6514629302A032D00322155 /* MainMenuAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuAppDelegate.swift; sourceTree = "<group>"; };
 		B66D35AA3018DFB0007E0DCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Base; path = Base.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		B66D35AB3018DFB0007E0DCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Base; path = Base.lproj/preferences.nib; sourceTree = "<group>"; };
 		B66D35AC3018DFB5007E0DCD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -92,8 +90,6 @@
 				35B007C51597BF56000CE409 /* Controllers */,
 				35B007CC1597BFC3000CE409 /* Others */,
 				35B6EE6915A0C4AD004C7C9B /* Libraries */,
-				35DBC8691597A15B00B9772E /* MainMenuAppDelegate.h */,
-				35DBC86A1597A15B00B9772E /* MainMenuAppDelegate.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -134,24 +130,16 @@
 				B6C646FE3029ED2A001B3A9D /* RegexParser.swift */,
 				B6C646FF3029ED2A001B3A9D /* Suggestion.swift */,
 				080E96DDFE201D6D7F000001 /* Classes */,
-				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 				B67CFB3F3029FE0700F9BC18 /* AvroKeyboardController.swift */,
+				B6514628302A032D00322155 /* main.swift */,
+				B6514629302A032D00322155 /* MainMenuAppDelegate.swift */,
 				B67CFB403029FE0700F9BC18 /* Candidates.swift */,
 				B67CFB413029FE0700F9BC18 /* PreferencesController.swift */,
 			);
 			name = NumberInput;
-			sourceTree = "<group>";
-		};
-		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
-			isa = PBXGroup;
-			children = (
-				32CA4F630368D1EE00C91783 /* AvroKeyboard_Prefix.pch */,
-				29B97316FDCFA39411CA2CEA /* main.m */,
-			);
-			name = "Other Sources";
 			sourceTree = "<group>";
 		};
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
@@ -302,8 +290,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D11072D0486CEB800E47090 /* main.m in Sources */,
-				35DBC86B1597A15B00B9772E /* MainMenuAppDelegate.m in Sources */,
 				B6C647003029ED2A001B3A9D /* AutoCorrect.swift in Sources */,
 				B6C647013029ED2A001B3A9D /* CacheManager.swift in Sources */,
 				B6C647023029ED2A001B3A9D /* Database.swift in Sources */,
@@ -312,6 +298,8 @@
 				B67CFB443029FE0700F9BC18 /* PreferencesController.swift in Sources */,
 				B6C647033029ED2A001B3A9D /* Suggestion.swift in Sources */,
 				B6C647043029ED2A001B3A9D /* AvroParser.swift in Sources */,
+				B651462A302A032D00322155 /* main.swift in Sources */,
+				B651462B302A032D00322155 /* MainMenuAppDelegate.swift in Sources */,
 				B6C647053029ED2A001B3A9D /* RegexParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

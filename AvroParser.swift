@@ -217,7 +217,7 @@ public class PatternTableParser: NSObject, @unchecked Sendable {
 /// Transliterates phonetic Latin text into Bengali using the pattern table
 /// in data.json.
 @objc(AvroParser)
-public final class AvroParser: PatternTableParser {
+public final class AvroParser: PatternTableParser, @unchecked Sendable {
 
     private static let shared = AvroParser(resourceName: "data")
 

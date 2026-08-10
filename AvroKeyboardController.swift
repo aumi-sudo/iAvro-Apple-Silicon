@@ -221,6 +221,10 @@ public class AvroKeyboardController: IMKInputController {
     }
 
     public override func menu() -> NSMenu! {
-        return (NSApp.delegate as AnyObject).menu
+        nonisolated(unsafe) var result: NSMenu?
+        MainActor.assumeIsolated {
+            result = (NSApp.delegate as AnyObject).menu
+        }
+        return result
     }
 }

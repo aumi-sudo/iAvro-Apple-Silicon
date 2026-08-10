@@ -24,15 +24,19 @@ public final class PreferencesController: NSWindowController, NSToolbarItemValid
     public override func awakeFromNib() {
         super.awakeFromNib()
 
-        window?.setContentSize(_generalView.frame.size)
-        window?.contentView?.addSubview(_generalView)
-        window?.contentView?.wantsLayer = true
+        // awakeFromNib itself is nonisolated, but nib loading always happens
+        // on the main thread; assert that so we can touch the UI.
+        MainActor.assumeIsolated {
+            window?.setContentSize(_generalView.frame.size)
+            window?.contentView?.addSubview(_generalView)
+            window?.contentView?.wantsLayer = true
 
-        // Load Credits
-        if let creditsPath = Bundle.main.path(forResource: "Credits", ofType: "rtfd") {
-            _aboutContent.readRTFD(fromFile: creditsPath)
+            // Load Credits
+            if let creditsPath = Bundle.main.path(forResource: "Credits", ofType: "rtfd") {
+                _aboutContent.readRTFD(fromFile: creditsPath)
+            }
+            _aboutContent.scrollToBeginningOfDocument(_aboutContent)
         }
-        _aboutContent.scrollToBeginningOfDocument(_aboutContent)
     }
 
     private func newFrame(forNewContentView view: NSView) -> NSRect {
