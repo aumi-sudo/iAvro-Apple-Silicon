@@ -8,8 +8,7 @@
 #import <Cocoa/Cocoa.h>
 #import <InputMethodKit/InputMethodKit.h>
 
-#import "Candidates.h"
-// Swift engine classes (AvroParser, Suggestion)
+// Swift classes (AvroParser, Suggestion, Candidates)
 #import "Avro_Keyboard-Swift.h"
 
 //Each input method needs a unique connection name. 
