@@ -12,12 +12,12 @@ import Foundation
 /// - phonetic cache: dictionary suggestions per term (session only)
 /// - base cache: maps suffixed words back to their base term (session only)
 @objc(CacheManager)
-final class CacheManager: NSObject {
+public final class CacheManager: NSObject, @unchecked Sendable {
 
     private static let shared = CacheManager()
 
     @objc(sharedInstance)
-    class func sharedInstance() -> CacheManager { shared }
+    public class func sharedInstance() -> CacheManager { shared }
 
     private let weightCache: NSMutableDictionary
     private var phoneticCache: [String: [String]] = [:]
@@ -33,7 +33,7 @@ final class CacheManager: NSObject {
         super.init()
     }
 
-    @objc func persist() {
+    @objc public func persist() {
         let plistPath = (CacheManager.sharedFolder() as NSString).appendingPathComponent("weight.plist")
         weightCache.write(toFile: plistPath, atomically: true)
     }
@@ -47,7 +47,7 @@ final class CacheManager: NSObject {
     // MARK: - Weight cache
 
     @objc(stringForKey:)
-    func string(forKey key: String) -> String? {
+    public func string(forKey key: String) -> String? {
         return weightCache[key] as? String
     }
 
@@ -57,7 +57,7 @@ final class CacheManager: NSObject {
     }
 
     @objc(setString:forKey:)
-    func setString(_ string: String, forKey key: String) {
+    public func setString(_ string: String, forKey key: String) {
         weightCache[key] = string
     }
 
@@ -78,7 +78,7 @@ final class CacheManager: NSObject {
     }
 
     @objc(baseForKey:)
-    func base(forKey key: String) -> [String]? {
+    public func base(forKey key: String) -> [String]? {
         return recentBaseCache[key]
     }
 

@@ -14,7 +14,9 @@ import Foundation
 /// All character handling is done on UTF-16 code units (the original code
 /// used `unichar` throughout); every pattern and rule check below mirrors the
 /// Objective-C implementation exactly to preserve typing behavior.
-class PatternTableParser: NSObject {
+// @unchecked Sendable: immutable after init; InputMethodKit drives everything
+// on the main thread, matching the original Objective-C's assumptions.
+public class PatternTableParser: NSObject, @unchecked Sendable {
 
     struct RuleMatch {
         let isSuffix: Bool
@@ -215,21 +217,21 @@ class PatternTableParser: NSObject {
 /// Transliterates phonetic Latin text into Bengali using the pattern table
 /// in data.json.
 @objc(AvroParser)
-final class AvroParser: PatternTableParser {
+public final class AvroParser: PatternTableParser {
 
     private static let shared = AvroParser(resourceName: "data")
 
     @objc(sharedInstance)
-    class func sharedInstance() -> AvroParser { shared }
+    public class func sharedInstance() -> AvroParser { shared }
 
     @objc(parse:)
-    func parse(_ string: String?) -> String {
+    public func parse(_ string: String?) -> String {
         return transliterate(string)
     }
 
     /// Lowercases every character that is not marked case-sensitive.
     @objc(fix:)
-    func fix(_ string: String) -> String {
+    public func fix(_ string: String) -> String {
         return normalized(string)
     }
 

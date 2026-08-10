@@ -12,12 +12,12 @@ import SQLite3
 /// table from the bundled SQLite database into memory, then answers
 /// pattern-matching lookups for suggestion building.
 @objc(Database)
-final class Database: NSObject {
+public final class Database: NSObject, @unchecked Sendable {
 
     private static let shared = Database()
 
     @objc(sharedInstance)
-    class func sharedInstance() -> Database { shared }
+    public class func sharedInstance() -> Database { shared }
 
     private var db: [String: [String]] = [:]
     private var suffixes: [String: String] = [:]
@@ -60,7 +60,7 @@ final class Database: NSObject {
         "z": ["h", "j", "jh", "z"],
     ]
 
-    override init() {
+    public override init() {
         super.init()
 
         guard let path = Bundle.main.path(forResource: "database", ofType: "db3") else { return }

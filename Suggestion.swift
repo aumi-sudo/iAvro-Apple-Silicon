@@ -11,12 +11,12 @@ import Foundation
 /// dictionary matches sorted by edit distance, suffix-derived words, and
 /// finally the plain phonetic transliteration.
 @objc(Suggestion)
-final class Suggestion: NSObject {
+public final class Suggestion: NSObject, @unchecked Sendable {
 
     private static let shared = Suggestion()
 
     @objc(sharedInstance)
-    class func sharedInstance() -> Suggestion { shared }
+    public class func sharedInstance() -> Suggestion { shared }
 
     /// Shared with AvroKeyboardController, which clears and decorates this
     /// array in place between keystrokes — it must stay one long-lived
@@ -30,7 +30,7 @@ final class Suggestion: NSObject {
         + "\u{098c}\u{09e1}\u{09be}\u{09bf}\u{09c0}\u{09c1}\u{09c2}\u{09c3}\u{09c7}\u{09c8}\u{09cb}\u{09cc}").utf16)
 
     @objc(getList:)
-    func getList(_ term: String) -> NSMutableArray {
+    public func getList(_ term: String) -> NSMutableArray {
         if term.isEmpty {
             return suggestions
         }

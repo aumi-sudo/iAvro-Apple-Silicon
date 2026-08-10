@@ -10,16 +10,16 @@ import Foundation
 /// pattern table in regex.json. Database.find matches the result against
 /// every dictionary word to collect suggestions.
 @objc(RegexParser)
-final class RegexParser: PatternTableParser {
+public final class RegexParser: PatternTableParser {
 
     private static let shared = RegexParser(resourceName: "regex",
                                             replacementSuffix: "(\u{09cd}[\u{09af}\u{09ac}\u{09ae}])?(\u{09cd}?)([\u{0983}\u{0981}]?)")
 
     @objc(sharedInstance)
-    class func sharedInstance() -> RegexParser { shared }
+    public class func sharedInstance() -> RegexParser { shared }
 
     @objc(parse:)
-    func parse(_ string: String?) -> String {
+    public func parse(_ string: String?) -> String {
         return transliterate(string)
     }
 

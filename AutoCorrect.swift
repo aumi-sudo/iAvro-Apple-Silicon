@@ -11,18 +11,18 @@ import Foundation
 /// differ are transliterated through AvroParser at load time; identical pairs
 /// (emoticons) are kept literal.
 @objc(AutoCorrect)
-final class AutoCorrect: NSObject {
+public final class AutoCorrect: NSObject, @unchecked Sendable {
 
     private static let shared = AutoCorrect()
 
     @objc(sharedInstance)
-    class func sharedInstance() -> AutoCorrect { shared }
+    public class func sharedInstance() -> AutoCorrect { shared }
 
     /// Foundation containers and `dynamic` because the preferences nib
     /// instantiates this class and binds an NSArrayController to this property.
-    @objc dynamic var autoCorrectEntries: NSMutableArray = NSMutableArray()
+    @objc public dynamic var autoCorrectEntries: NSMutableArray = NSMutableArray()
 
-    override init() {
+    public override init() {
         super.init()
 
         guard let path = Bundle.main.path(forResource: "autodict", ofType: "dct") else { return }
@@ -45,7 +45,7 @@ final class AutoCorrect: NSObject {
     }
 
     @objc(find:)
-    func find(_ term: String) -> String? {
+    public func find(_ term: String) -> String? {
         let fixedTerm = AvroParser.sharedInstance().fix(term) as NSString
 
         var left = 0
