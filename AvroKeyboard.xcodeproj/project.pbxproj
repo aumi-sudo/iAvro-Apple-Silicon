@@ -84,16 +84,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		080E96DDFE201D6D7F000001 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				35B007C51597BF56000CE409 /* Controllers */,
-				35B007CC1597BFC3000CE409 /* Others */,
-				35B6EE6915A0C4AD004C7C9B /* Libraries */,
-			);
-			name = Classes;
-			sourceTree = "<group>";
-		};
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,21 +113,10 @@
 		29B97314FDCFA39411CA2CEA /* NumberInput */ = {
 			isa = PBXGroup;
 			children = (
-				B6C646FA3029ED2A001B3A9D /* AutoCorrect.swift */,
-				B6C646FB3029ED2A001B3A9D /* AvroParser.swift */,
-				B6C646FC3029ED2A001B3A9D /* CacheManager.swift */,
-				B6C646FD3029ED2A001B3A9D /* Database.swift */,
-				B6C646FE3029ED2A001B3A9D /* RegexParser.swift */,
-				B6C646FF3029ED2A001B3A9D /* Suggestion.swift */,
-				080E96DDFE201D6D7F000001 /* Classes */,
+				B6BFE996302C7CA700B7CB51 /* Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				B67CFB3F3029FE0700F9BC18 /* AvroKeyboardController.swift */,
-				B6514628302A032D00322155 /* main.swift */,
-				B6514629302A032D00322155 /* MainMenuAppDelegate.swift */,
-				B67CFB403029FE0700F9BC18 /* Candidates.swift */,
-				B67CFB413029FE0700F9BC18 /* PreferencesController.swift */,
 			);
 			name = NumberInput;
 			sourceTree = "<group>";
@@ -181,33 +160,46 @@
 			name = Icons;
 			sourceTree = "<group>";
 		};
-		35B007C51597BF56000CE409 /* Controllers */ = {
+		B6BFE996302C7CA700B7CB51 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				B6BFE999302C7CD100B7CB51 /* Controllers */,
+				B6BFE998302C7CCB00B7CB51 /* Engine */,
+				B6BFE997302C7CC300B7CB51 /* App */,
 			);
-			name = Controllers;
+			path = Sources;
 			sourceTree = "<group>";
 		};
-		35B007CC1597BFC3000CE409 /* Others */ = {
+		B6BFE997302C7CC300B7CB51 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				35B6EE6815A0C4A4004C7C9B /* Parsers */,
+				B6514628302A032D00322155 /* main.swift */,
+				B6514629302A032D00322155 /* MainMenuAppDelegate.swift */,
 			);
-			name = Others;
+			path = App;
 			sourceTree = "<group>";
 		};
-		35B6EE6815A0C4A4004C7C9B /* Parsers */ = {
+		B6BFE998302C7CCB00B7CB51 /* Engine */ = {
 			isa = PBXGroup;
 			children = (
+				B6C646FA3029ED2A001B3A9D /* AutoCorrect.swift */,
+				B6C646FB3029ED2A001B3A9D /* AvroParser.swift */,
+				B6C646FC3029ED2A001B3A9D /* CacheManager.swift */,
+				B6C646FD3029ED2A001B3A9D /* Database.swift */,
+				B6C646FE3029ED2A001B3A9D /* RegexParser.swift */,
+				B6C646FF3029ED2A001B3A9D /* Suggestion.swift */,
 			);
-			name = Parsers;
+			path = Engine;
 			sourceTree = "<group>";
 		};
-		35B6EE6915A0C4AD004C7C9B /* Libraries */ = {
+		B6BFE999302C7CD100B7CB51 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B67CFB3F3029FE0700F9BC18 /* AvroKeyboardController.swift */,
+				B67CFB403029FE0700F9BC18 /* Candidates.swift */,
+				B67CFB413029FE0700F9BC18 /* PreferencesController.swift */,
 			);
-			name = Libraries;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
